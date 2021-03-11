@@ -29,8 +29,6 @@ calculateBtn.addEventListener("click", function(){
 
     }
 
-    var clietCoupon = document.getElementById("burger-coupon").value;
-    console.log(clietCoupon);
 
     var coupons = [
       "asdtre",
@@ -38,18 +36,38 @@ calculateBtn.addEventListener("click", function(){
       "mnblkj"
     ];
 
+    var clietCoupon = document.getElementById("burger-coupon").value;
+    console.log(clietCoupon);
     for (i = 0; i < coupons.length; i++){
 
       var couponAccepted = coupons[i];
+      if(couponAccepted == clietCoupon){
+
+        prezzoFinale = prezzoFinale - prezzoFinale * 0.2;
+      }
     }
 
-    if(couponAccepted == clietCoupon){
-
-      prezzoFinale = prezzoFinale - prezzoFinale * 0.2;
-    }
   }
 
   document.getElementById("prezzo").innerHTML = prezzoFinale;
   console.log(listItem, ischecked, prezzoFinale);
 
 })
+
+var lis = document.getElementsByTagName("li");
+console.log(lis);
+
+for(i = 0; i < lis.length; i++){
+
+  var li = lis[i];
+
+  li.addEventListener("click", function(){
+
+    var clicked = this;
+    var clickedChildrens = clicked.children;
+    var checkbox = clickedChildrens[1];
+    checkbox.checked = !checkbox.checked;
+    
+    console.log(this.children[1], clickedChildrens[1]);
+  })
+}
