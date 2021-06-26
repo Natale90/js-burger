@@ -1,0 +1,118 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header, main, footer{
+  padding-left: 30px;
+}
+
+label{
+  margin-right: 15px;
+}
+
+input{
+  padding: 10px;
+  border: none;
+}
+.container{
+  width: 80%;
+  margin: 200px auto;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+li img {
+  width: 20px;
+  height: auto;
+}
+
+.menu_left li,
+.menu_right li{
+  list-style-type: none;
+  font-size: 20px;
+  position: relative;
+}
+
+.menu_right {
+  margin-left: 5%;
+}
+
+header{
+  background-color: #ffbd2c;
+  font-size: 30px;
+  position:relative;
+  border-radius: 10px 10px 0 0;
+}
+
+header img{
+  width: 130px;
+  height: auto;
+  position:absolute;
+  right: -60px;
+  top: 0px;
+  background-position: right;
+}
+
+
+.menu{
+  display: flex;
+}
+
+.b_name_div{
+  margin: 20px 0;
+  font-size: 20px;
+}
+
+li{
+  margin: 30px 0;
+}
+
+.fake_check{
+  position: absolute;
+  top: 3px;
+  left: 23px;
+  display: none;
+}
+
+.fake_check_active{
+  display: block;
+}
+
+.fake_check .fa-check-square{
+  background-color: lightgreen;
+}
+
+/* .menu_left > li:checked .fake_check{
+  display:block;
+} */
+
+#coupon_area{
+  font-size: 20px;
+}
+
+#coupon_code{
+  width: 30%;
+  background-color: #f9eeee;
+  border:none;
+}
+
+#price_area{
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+#calculate_button{
+  padding: 10px;
+  border: none;
+}
+
+footer{
+  font-size: 20px;
+  margin: 20px 0 0 0;
+  padding: 30px;
+  background-color: #da0b2a;
+  border-radius: 0 0 10px 10px;
+}
